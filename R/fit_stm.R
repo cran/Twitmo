@@ -8,7 +8,7 @@
 #' or a character vector (\code{c("favourites_count", "retweet_count")})
 #' or comma seperated character string (\code{"favourites_count,retweet_count"})
 #' with column names implying which metadata to use as external covariates.
-#' @param remove_punct Logical. Indicates wheter punctuation (includes Twitter hashtags and usernames)
+#' @param remove_punct Logical. Indicates whether punctuation (includes Twitter hashtags and usernames)
 #' should be removed. Defaults to TRUE.
 #' @param stem Logical. If \code{TRUE} turn on word stemming for terms.
 #' @param ... Additional arguments passed to \link[stm]{stm}.
@@ -88,15 +88,30 @@ Type `?fit_stm` to learn more.")
 
   }
 
-  # perform usual pre-processing steps
-  processed <- stm::textProcessor(data$text,
-                                  metadata = data,
-                                  lowercase = TRUE,
-                                  removestopwords = TRUE,
-                                  removepunctuation = remove_punct,
-                                  stem = stem,
-                                  language = stopwords,
-                                  customstopwords = c("amp", "na", "rt", "via"))
+  # routine if stopwords missing or set to FALSE by user
+  if (isFALSE(stopwords)) {
+    # perform usual pre-processing steps w/o stopwords
+    processed <- stm::textProcessor(data$text,
+                                    metadata = data,
+                                    lowercase = TRUE,
+                                    removestopwords = FALSE,
+                                    removepunctuation = remove_punct,
+                                    stem = stem,
+                                    language = NA,
+                                    customstopwords = c("amp", "na", "rt", "via"))
+  } else {
+    # perform usual pre-processing steps
+    processed <- stm::textProcessor(data$text,
+                                    metadata = data,
+                                    lowercase = TRUE,
+                                    removestopwords = TRUE,
+                                    removepunctuation = remove_punct,
+                                    stem = stem,
+                                    language = stopwords,
+                                    customstopwords = c("amp", "na", "rt", "via"))
+  }
+
+
   # prepare data for stm modeling
   out <- stm::prepDocuments(documents = processed$documents,
                             vocab = processed$vocab,

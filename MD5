@@ -1,9 +1,10 @@
-c1636e505184e3ef2324005417677255 *DESCRIPTION
+4cc53345c347a00dcd35571915a9976a *DESCRIPTION
 ba985ce1d8e26122389395bd93bbdbee *LICENSE
 695a4839b7bdf67fd6e666c9faa8b390 *NAMESPACE
+cac2d93553f5b7d1e0ddc89d1dd6bf82 *NEWS.md
 5d1e3dcd97e7d8be7289834036dd52f0 *R/filter_tweets.R
 f1043a7235b14dd50f2e9b6c2843ad34 *R/fit_lda.R
-a4a1f89b8d10ca10daa40bbec4a8e503 *R/fit_stm.R
+1bd79e5f6238c627e68d4956150422e4 *R/fit_stm.R
 a6c9c009350f950e30702cbd2bb980e7 *R/get_tweets.R
 8ea3a6933e835883d2e4857b145426ab *R/parse_tweets.R
 0ea257ad1928260cfe8c68a170ce1d58 *R/plots.R
@@ -11,10 +12,10 @@ a6c9c009350f950e30702cbd2bb980e7 *R/get_tweets.R
 939c71394e56e8af61783fbf6f0eeb73 *R/sysdata.rda
 140d82e925655c4d3722bd1a0733738d *R/to_ldavis.R
 b56ff2b193ecba52f9ec7f3b10cca008 *R/utils-pipe.R
-6884acfd10ff50597e1d5c2d74fbf237 *README.md
+d51a74a8f03b50f1e51786c71fa8039e *README.md
 7f32f8497b4673977366cc5047572203 *inst/extdata/tweets_20191027-141233.json
 68448ee51271b75d1023edde5043ae60 *man/cluster_tweets.Rd
-6660a7b87592461b03215dbd31a149db *man/figures/README-ldatuner-1.png
+9ed57ce21469339142c61c6a446f71f4 *man/figures/README-ldatuner-1.png
 42855fb13ba67c0bc6ae574938ae79f2 *man/figures/README-unnamed-chunk-13-1.png
 e6dee7f62251d529fc1321b1aca73d9d *man/figures/README-unnamed-chunk-14-1.png
 f44542eac6c6ede6abcec32dc82f42fb *man/figures/create_sticker.R
@@ -28,7 +29,7 @@ a2da41b83d55e1549214b3d8698201e2 *man/figures/to_ldavis.png
 bdded85ada848d4472effc666fe7dd9a *man/find_stm.Rd
 3cda1b28e1d2b68060f1ed78bea42384 *man/fit_ctm.Rd
 eb9971da5941ea42efb40825b457569b *man/fit_lda.Rd
-e669fc0d966e70a52f184feb85e52e97 *man/fit_stm.Rd
+c8f329962f5cf8a43c8e11577d6d5802 *man/fit_stm.Rd
 76fab063f172bd7943c3f032710a239c *man/get_tweets.Rd
 6b5dd63069bde8ffa6e7008f857bcdda *man/lda_distribution.Rd
 ce517c68c45b8a79124cd495254431eb *man/lda_hashtags.Rd
